@@ -1,5 +1,5 @@
-# Pwnagotchi-ai32 plugins
-Plugins from the [pwnagotchi-ai32 image](https://github.com/flippedgannet/pwnagotchi-ai32) (existing, not included in the image, and under development).
+# Pwnagotchi32 AI plugins
+Existing, not included in the image, and under development plugins from the [pwnagotchi-ai32 image](https://github.com/flippedgannet/pwnagotchi-ai32) (outdated) & **[pwnagotchi32-sb image](https://github.com/NixPokeFun/pwnagotchi32-sb)** (actual).
 ## bcap-update.py
 Background bettercap OUI and caplets updater with pwnagotchi.cap protection, log cleaner, and recovery wipe in MANU mode. It isn't in the SB3 versions and won't be anymore; there isn't much point to it.
 ```toml
