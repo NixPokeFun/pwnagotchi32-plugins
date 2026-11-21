@@ -1,5 +1,32 @@
 # Pwnagotchi32 AI plugins
 Existing, not included in the image, and under development plugins from the [pwnagotchi-ai32 image](https://github.com/flippedgannet/pwnagotchi-ai32) (outdated) & **[pwnagotchi32-sb image](https://github.com/NixPokeFun/pwnagotchi32-sb)** (actual).
+
+### auto-update.py
+
+The `auto-update` plugin checks for updates when internet access is available. It supports GitHub Releases for `bettercap` and `pwngrid`, plus source-based updates for the Pwnagotchi package and the bundled `pwnagotchi` and `pwnygen` executables.
+
+The bundled executables are downloaded from `bin/pwnagotchi` and `bin/pwnygen` in the configured repository and installed to `/usr/local/bin/`. Package and executable update states are tracked independently.
+
+   ```toml
+   [main.plugins.auto-update]
+   enabled = true
+   interval = 1
+   install = true
+   token = ""
+   reboot = false
+   update_pwnagotchi = true
+   pwnagotchi_repo = "NixPokeFun/pwnagotchi32-sb"
+   pwnagotchi_branch = "main"
+   ```
+
+**Update targets:**
+
+| Component | Source | Default destination |
+|---|---|---|
+| `bettercap`, `pwngrid` | Their GitHub Releases | `/usr/local/bin/` |
+| Pwnagotchi package | Latest commit on the configured branch | Detected installed `pwnagotchi/` package |
+| `pwnagotchi`, `pwnygen` | `bin/` at the selected repository commit | `/usr/local/bin/` |
+
 ## bcap-update.py
 Background bettercap OUI and caplets updater with pwnagotchi.cap protection, log cleaner, and recovery wipe in MANU mode. It isn't in the SB3 versions and won't be anymore; there isn't much point to it.
 ```toml
