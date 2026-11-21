@@ -1,7 +1,7 @@
 # Pwnagotchi32 AI plugins
 Existing, not included in the image, and under development plugins from the [pwnagotchi-ai32 image](https://github.com/flippedgannet/pwnagotchi-ai32) (outdated) & **[pwnagotchi32-sb image](https://github.com/NixPokeFun/pwnagotchi32-sb)** (actual).
 
-### auto-update.py
+## auto-update.py
 
 The `auto-update` plugin checks for updates when internet access is available. It supports GitHub Releases for `bettercap` and `pwngrid`, plus source-based updates for the Pwnagotchi package and the bundled `pwnagotchi` and `pwnygen` executables.
 
